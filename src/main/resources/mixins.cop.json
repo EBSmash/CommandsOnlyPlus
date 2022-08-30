@@ -4,5 +4,5 @@
   "refmap": "refmap.cop.json",
   "mixins": [
     "MixinNetworkManager"
-  ]
+  ],
 }

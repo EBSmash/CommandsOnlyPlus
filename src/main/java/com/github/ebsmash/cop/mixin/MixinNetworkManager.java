@@ -1,6 +1,8 @@
 package com.github.ebsmash.cop.mixin;
 
 import com.github.ebsmash.cop.CommandsOnlyPlus;
+import com.github.ebsmash.cop.util.ToggleMessage;
+import com.mojang.realmsclient.gui.ChatFormatting;
 import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
@@ -26,6 +28,7 @@ public class MixinNetworkManager {
             if(message.toLowerCase(Locale.ROOT).contains("-togglechat") || message.toLowerCase(Locale.ROOT).contains("-tc")){
                 callbackInfo.cancel();
                 CommandsOnlyPlus.enabled = !CommandsOnlyPlus.enabled;
+                ToggleMessage.sendMessage(ChatFormatting.BOLD + "Chat mute has been toggled.");
             }
         }
     }
