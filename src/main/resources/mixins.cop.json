@@ -1,0 +1,8 @@
+{
+  "compatibilityLevel": "JAVA_8",
+  "package": "com.github.ebsmash.cop.mixin",
+  "refmap": "refmap.cop.json",
+  "mixins": [
+    "MixinNetworkManager"
+  ]
+}
